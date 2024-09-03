@@ -44,10 +44,20 @@ struct Weather: Codable {
 struct Current: Codable {
     let tempC: Double
     let condition: Condition
+    let windMph: Double
+    let windDir: String
+    let pressureIn: Double
+    let humidity: Int
+    let feelslikeC: Double
 
     enum CodingKeys: String, CodingKey {
         case tempC = "temp_c"
         case condition
+        case windMph = "wind_mph"
+        case windDir = "wind_dir"
+        case pressureIn = "pressure_in"
+        case humidity
+        case feelslikeC = "feelslike_c"
     }
 }
 
